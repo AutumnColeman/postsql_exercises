@@ -12,6 +12,8 @@ CREATE TABLE restaurant (
  \d restaurant
 
 -- insert statements into table
+insert into restaurant values
+(default, 'Vortex', 6.5, 4, 'American', 'Holy Guacamole Burger', TRUE, '2016-09-29');
 
 insert into restaurant values
 (default, 'Shoya Izakaya', 7.5, 4, 'Japanese', 'Tonkatsu Ramen', TRUE, '2016-08-20');
@@ -25,7 +27,7 @@ insert into restaurant values
 -- Writing queries
 select * from restaurant where stars = 5;
 select favorite_dish from restaurant where stars = 5;
-select id from restaurant where name = 'Vortex'; 
+select id from restaurant where name = 'Vortex';
 select name from restaurant where category = 'BBQ';
 select name from restaurant where takeout = FALSE;
 select name from restaurant where category = 'BBQ' and takeout = TRUE;
